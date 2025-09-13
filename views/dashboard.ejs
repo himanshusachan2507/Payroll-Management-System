@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Welcome <%= user.name %>!</h2>
+      <a class="logout-btn" href="/logout">Logout</a>
+    </div>
+
+    <h3>Your Referrals</h3>
+    <% if (referrals.length === 0) { %>
+      <p>No referrals yet.</p>
+    <% } else { %>
+      <ul class="referral-list">
+        <% referrals.forEach(r => { %>
+          <li>
+            <strong><%= r.title %></strong> at <%= r.company %> - <%= r.status %>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+
+    <h3>Post New Referral</h3>
+    <form method="post" action="/referral" class="referral-form">
+      <input type="text" name="title" placeholder="Job Title" required />
+      <input type="text" name="company" placeholder="Company" required />
+      <textarea name="description" placeholder="Description"></textarea>
+      <button type="submit">Post Referral</button>
+    </form>
+  </div>
+</body>
+</html>
