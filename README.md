@@ -1,40 +1,52 @@
-# Referral Platform MVP
+Referral Platform MVP
 
-### How to run
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
+The Referral Platform MVP is a web-based application that simplifies and streamlines the referral process. It allows users to share referral links, track their referrals, and earn rewards in a transparent way. This project serves as a minimal viable product to demonstrate the essential flow of a referral system.
 
-2. Create `.env` file from `.env.example` and fill database details.
+ Features -
 
-3. Create MySQL database and run this SQL:
+Generate and share unique referral links
 
-   ```sql
-   CREATE DATABASE referral_platform;
-   USE referral_platform;
+Track referrals and their status
 
-   CREATE TABLE users (
-     id INT AUTO_INCREMENT PRIMARY KEY,
-     name VARCHAR(100),
-     email VARCHAR(100) UNIQUE,
-     password VARCHAR(255)
-   );
+Reward system for successful referrals
 
-   CREATE TABLE referrals (
-     id INT AUTO_INCREMENT PRIMARY KEY,
-     user_id INT,
-     title VARCHAR(100),
-     company VARCHAR(100),
-     description TEXT,
-     status VARCHAR(50) DEFAULT 'pending',
-     FOREIGN KEY (user_id) REFERENCES users(id)
-   );
-   ```
+Dashboard for viewing invites and rewards
 
-4. Start server:
-   ```bash
-   npm start
-   ```
+Secure authentication (login & signup)
 
-5. Visit: `http://localhost:3000`
+ Tech Stack -
+
+Frontend: React.js / Next.js
+
+Backend: Node.js (Express)
+
+Database: PostgreSQL / MySQL / MongoDB
+
+Authentication: JWT
+
+Deployment: Docker / Vercel / Render
+
+ Getting Started -
+
+Clone the repository *
+
+git clone https://github.com/your-username/referral-platform-mvp.git
+cd referral-platform-mvp
+
+
+Install dependencies
+
+npm install
+
+
+Start the development server
+
+npm run dev
+
+Project Goals-
+
+Provide a simple and scalable referral management system
+
+Demonstrate the core flow from invitation → referral → reward
+
+Build a foundation for adding features like analytics, email invites, and automated reward distribution
