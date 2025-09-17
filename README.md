@@ -30,8 +30,7 @@ Deployment: Docker / Vercel / Render
 
 Clone the repository *
 
-git clone https://github.com/your-username/referral-platform-mvp.git
-cd referral-platform-mvp
+git clone - https://github.com/himanshusachan2507/Payroll-Management-System
 
 
 Install dependencies
